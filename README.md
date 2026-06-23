@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Sistema básico orientado a objetos desarrollado para representar personas vinculadas a una agencia de turismo ubicada en la comuna de Llanquihue. Este proyecto permite gestionar la información de guías turísticos mediante la lectura de datos desde un archivo CSV, almacenándolos en una colección dinámica para su posteriormente visualizarlos y búscarlos.
+Sistema básico orientado a objetos desarrollado para representar personas vinculadas a una agencia de turismo ubicada en la comuna de Llanquihue. Este proyecto permite gestionar la información de guías turísticos mediante la lectura de datos desde un archivo CSV, almacenándolos en una colección dinámica para posteriormente poder visualizarlos.
 ## Estructura del proyecto
 
 ### Paquete app
