@@ -1,6 +1,6 @@
 package model;
 
-public class GuiaTuristico extends Persona {
+public class GuiaTuristico extends Persona implements Registrable {
 
     private String idioma;
 
@@ -21,5 +21,10 @@ public class GuiaTuristico extends Persona {
     public String toString() {
         return super.toString() +
                 "\nIdioma: " + idioma;
+    }
+    @Override
+    public String mostrarResumen() {
+        return "Guía: " + getNombre() +
+                " | Idioma: " + idioma;
     }
 }
