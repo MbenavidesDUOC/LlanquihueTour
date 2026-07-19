@@ -2,45 +2,76 @@
 
 ## Descripción
 
-Sistema orientado a objetos desarrollado para representar distintas entidades vinculadas a una agencia de turismo ubicada en la comuna de Llanquihue. El proyecto permite gestionar guías turísticos mediante la lectura de datos desde un archivo CSV, además de administrar vehículos y colaboradores externos utilizando interfaces, herencia, polimorfismo y colecciones dinámicas. También incorpora una interfaz gráfica básica con JOptionPane para facilitar el ingreso y visualización de información.
+LlanquihueTour es un sistema desarrollado en Java utilizando Programación Orientada a Objetos para representar y gestionar distintas entidades vinculadas a una agencia de turismo ubicada en la comuna de Llanquihue.
+
+El proyecto permite administrar guías turísticos, vehículos y colaboradores externos, aplicando principios como encapsulamiento, composición, herencia, polimorfismo e interfaces. Además, utiliza colecciones dinámicas (`ArrayList`), lectura de datos desde un archivo de texto (`.txt`) e incorpora una interfaz gráfica básica mediante `JOptionPane` para facilitar la interacción con el usuario.
 
 ---
 
-## Estructura del proyecto
+# Estructura del proyecto
 
-### Paquete app
-
-- Main.java
-
-### Paquete model
-
-- Direccion.java
-- Persona.java
-- GuiaTuristico.java
-- Vehiculo.java
-- ColaboradorExterno.java
-- Registrable.java
-
-### Paquete service
-
-- GuiaService.java
-
-### Paquete data
-
-- GestorEntidades.java
-- guias.csv
-
-### Paquete ui
-
-- MenuGUI.java
-
-### Paquete util
-
-- ArchivoUtil.java
+```
+src
+│
+├── app
+│   └── Main.java
+│
+├── data
+│   ├── GestorEntidades.java
+│   └── guias.txt
+│
+├── model
+│   ├── Persona.java
+│   ├── Direccion.java
+│   ├── GuiaTuristico.java
+│   ├── Vehiculo.java
+│   ├── ColaboradorExterno.java
+│   └── Registrable.java
+│
+├── service
+│   └── GuiaService.java
+│
+├── ui
+│   └── MenuGUI.java
+│
+└── util
+    └── ArchivoUtil.java
+```
 
 ---
 
-## Conceptos aplicados
+# Clases principales
+
+### Persona
+Clase base que almacena la información común de las personas del sistema.
+
+### Direccion
+Representa la dirección de una persona y se utiliza mediante composición.
+
+### GuiaTuristico
+Hereda de `Persona` y representa a un guía turístico con su idioma correspondiente.
+
+### Vehiculo
+Representa un vehículo disponible para realizar los recorridos turísticos.
+
+### ColaboradorExterno
+Hereda de `Persona` y representa colaboradores pertenecientes a empresas externas.
+
+### Registrable
+Interfaz implementada por las entidades registrables del sistema para aplicar polimorfismo.
+
+### GestorEntidades
+Administra las entidades utilizando una colección dinámica de tipo `ArrayList<Registrable>`.
+
+### GuiaService
+Contiene la lógica para mostrar y buscar guías turísticos.
+
+### ArchivoUtil
+Permite leer el archivo `guias.txt` y convertir la información en objetos del sistema.
+
+---
+
+# Conceptos de Programación Orientada a Objetos aplicados
 
 - Encapsulamiento mediante atributos privados.
 - Uso de constructores.
@@ -49,41 +80,55 @@ Sistema orientado a objetos desarrollado para representar distintas entidades vi
 - Herencia (`GuiaTuristico` y `ColaboradorExterno` heredan de `Persona`).
 - Composición (`Persona` contiene una `Direccion`).
 - Interfaces (`Registrable`).
-- Polimorfismo.
+- Polimorfismo mediante `ArrayList<Registrable>`.
 - Uso de `instanceof`.
 - Organización del código en paquetes.
 - Uso de colecciones mediante `ArrayList`.
-- Lectura de archivos CSV.
-- Búsqueda de información mediante filtros.
-- Manejo básico de excepciones con `try-catch`.
+- Lectura de datos desde archivos de texto (`.txt`).
+- Manejo básico de excepciones mediante `try-catch`.
 - Interfaz gráfica utilizando `JOptionPane`.
 
 ---
 
-## Funcionalidades
+# Funcionalidades
 
-- Cargar guías turísticos desde un archivo CSV.
-- Almacenar entidades en una colección dinámica (`ArrayList`).
+- Cargar guías turísticos desde un archivo de texto (`guias.txt`).
 - Registrar guías turísticos.
 - Registrar vehículos.
 - Registrar colaboradores externos.
-- Mostrar información mediante polimorfismo.
-- Diferenciar entidades utilizando `instanceof`.
-- Buscar guías según el idioma (Inglés o Español).
-- Interactuar con el sistema mediante una interfaz gráfica simple.
+- Almacenar entidades utilizando una colección dinámica (`ArrayList`).
+- Mostrar información aplicando polimorfismo.
+- Identificar el tipo de entidad mediante `instanceof`.
+- Buscar guías turísticos según su idioma.
+- Mostrar la información mediante una interfaz gráfica desarrollada con `JOptionPane`.
 
 ---
 
-## Ejecución
+# Ejecución
 
 1. Abrir el proyecto en IntelliJ IDEA.
-2. Verificar que el archivo `guias.csv` se encuentre dentro del paquete `data`.
+2. Verificar que el archivo `guias.txt` se encuentre dentro del paquete `data`.
 3. Ejecutar la clase `Main` ubicada en el paquete `app`.
-4. Utilizar el menú para registrar nuevas entidades o visualizar la información almacenada.
-5. La información también se mostrará por consola para demostrar el funcionamiento del polimorfismo y el uso de `instanceof`.
+4. Utilizar el menú para registrar nuevas entidades.
+5. Visualizar las entidades registradas y realizar búsquedas de guías turísticos por idioma.
+6. La información también se mostrará por consola para evidenciar el uso de polimorfismo e `instanceof`.
 
 ---
 
-## Autor del proyecto
+# Tecnologías utilizadas
 
-Mariana Benavides
+- Java
+- IntelliJ IDEA
+- Programación Orientada a Objetos (POO)
+- ArrayList
+- JOptionPane
+- Git
+- GitHub
+
+---
+
+# Autor
+
+**Mariana Benavides**
+
+Proyecto desarrollado para la **Evaluación Final Transversal** de la asignatura **Desarrollo Orientado a Objetos I**.

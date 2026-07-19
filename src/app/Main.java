@@ -30,7 +30,7 @@ public class Main {
         System.out.println(cliente);
 
 
-        String rutaArchivo = "src/data/guias.csv";
+        String rutaArchivo = "src/data/guias.txt";
 
         ArrayList<GuiaTuristico> guias =
                 ArchivoUtil.cargarGuias(rutaArchivo);

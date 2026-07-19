@@ -33,8 +33,8 @@ public class Vehiculo implements Registrable {
 
     @Override
     public String toString() {
-        return "Vehículo\n" +
-                "Modelo: " + modelo +
+        return "Vehículo" +
+                "\nModelo: " + modelo +
                 "\nPatente: " + patente;
     }
 }

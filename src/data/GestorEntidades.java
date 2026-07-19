@@ -21,6 +21,11 @@ public class GestorEntidades {
 
     public void mostrarEntidades() {
 
+        if (entidades.isEmpty()) {
+            System.out.println("No hay entidades registradas.");
+            return;
+        }
+
         for (Registrable entidad : entidades) {
 
             System.out.println(entidad.mostrarResumen());
